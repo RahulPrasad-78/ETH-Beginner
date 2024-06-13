@@ -53,9 +53,6 @@ Follow these steps to set up and deploy the contract using Remix IDE:
 
 For common issues or problems, you can refer to the Remix IDE documentation or check the console for error messages.
 
-command to run if program contains helper info
-```
-
 ## Authors
 
 Contributors names and contact info:
