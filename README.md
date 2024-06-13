@@ -1,41 +1,65 @@
 # Project Title
 
-Simple overview of use/purpose.
+A simple smart contract for creating and managing a token named "Newton" with the abbreviation "N".
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+The `MyToken` contract allows users to mint new tokens, burn existing tokens, and keep track of token balances associated with different addresses. The contract demonstrates basic token management on the Ethereum blockchain.
 
 ## Getting Started
 
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+Follow these steps to set up and deploy the contract using Remix IDE:
+
+1. **Open Remix IDE:**
+   Go to [Remix IDE](https://remix.ethereum.org).
+
+2. **Create a New File:**
+   - In the left sidebar, click on the "+" icon to create a new file.
+   - Name your file `MyToken.sol`.
+
+3. **Paste the Solidity Code:**
+   ```solidity
+   // SPDX-License-Identifier: MIT
+   pragma solidity 0.8.18;
+
+   contract MyToken {
+
+       // public variables here
+       string public TOken_Name = "Newton";
+       string public Token_Abbrv = "N";
+       uint public Total_Supply = 0;
+       
+       // mapping variable here
+       mapping(address => uint) public Balanace;
+
+       // mint function
+       function mint (address _Addre, uint _val) public {
+           Total_Supply += _val;
+           Balanace[_Addre] += _val;
+       }
+
+       // burn function
+       function burn (address _Addre, uint _val) public {
+           if(Total_Supply >= _val) {
+               Total_Supply -= _val;
+               Balanace[_Addre] -= _val;
+           }
+       }
+   }
 
 ## Help
 
-Any advise for common problems or issues.
-```
+For common issues or problems, you can refer to the Remix IDE documentation or check the console for error messages.
+
 command to run if program contains helper info
 ```
 
 ## Authors
 
-Contributors names and contact info
+Contributors names and contact info:
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Rahul Prasad
+@RahulPrasad-78
 
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
