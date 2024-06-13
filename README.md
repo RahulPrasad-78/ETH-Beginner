@@ -49,6 +49,15 @@ Follow these steps to set up and deploy the contract using Remix IDE:
        }
    }
 
+## Function Usage
+#mint
+The mint function allows you to create new tokens and add them to a specified address.
+
+#Parameters:
+
+_Addre: The address to which the newly minted tokens will be added.
+_val: The amount of tokens to mint.
+
 ## Help
 
 For common issues or problems, you can refer to the Remix IDE documentation or check the console for error messages.
