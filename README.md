@@ -53,6 +53,9 @@ Follow these steps to set up and deploy the contract using Remix IDE:
 ### mint
 The mint function allows you to create new tokens and add them to a specified address.
 
+### burn
+The burn function allows you to destroy tokens from a specified address, reducing the total supply.
+
 ### Parameters:
 
 _Addre: The address to which the newly minted tokens will be added.
@@ -67,5 +70,5 @@ For common issues or problems, you can refer to the Remix IDE documentation or c
 Contributors names and contact info:
 
 Rahul Prasad
-@RahulPrasad-78
+(rahulprasad4653@gmail.com)
 
